@@ -4,7 +4,7 @@ Input data are processed into a data hierarchy that organizes collections of str
 and data files. Structure files define 3D geometry for a specific collection of genomic
 material. Data can then be mapped into 3D space by using a specific structure.
 
-# input datasets
+## Input datasets
 
 ```
 artifact/
@@ -36,7 +36,7 @@ artifact/
         track/
 ```
 
-# 4D fused datasets
+## 4D fused datasets
 
 These datasets contain enough information to be viewed in 4D (3D plus some definition of
 a sequence). 
@@ -68,7 +68,7 @@ artifact/
                 meta.yaml
 ```
 
-# comparative visualization
+## Comparative visualization
 
 This includes enough information to view two artifacts with the same definition of a
 sequence.
