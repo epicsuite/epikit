@@ -68,7 +68,12 @@ artifact/
                 meta.yaml
 ```
 
-## Comparative visualization
+## Session 
 
 This includes enough information to view two artifacts with the same definition of a
 sequence.
+
+```
+session/
+    session.yaml
+```
