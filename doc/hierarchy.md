@@ -1,0 +1,30 @@
+
+''''
+artifact/
+    meta.yaml
+    structure/
+        chr1/
+            100000/
+                structure.csv
+                meta.yaml
+            250000/
+                structure.csv
+                meta.yaml
+        chr10/
+            100000/
+                structure.csv
+                meta.yaml
+            250000/
+                structure.csv
+                meta.yaml
+    data/
+        peak/
+            0/
+                data.csv 
+                meta.yaml
+            1/
+                data.csv 
+                meta.yaml
+        feature/
+        track/
+''''
