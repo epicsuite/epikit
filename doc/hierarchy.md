@@ -1,4 +1,4 @@
-# overview
+
 
 Input data are processed into a data hierarchy that organizes collections of structure
 and data files. Structure files define 3D geometry for a specific collection of genomic
@@ -38,16 +38,37 @@ artifact/
 
 # 4D fused datasets
 
+These datasets contain enough information to be viewed in 4D (3D plus some definition of
+a sequence). 
+
 ```
 artifact/
     meta.yaml
-    structure.csv
-    peak/
-        0/
-            data.csv
-            meta.yaml
-    feature/
-        0/
-            data.csv
-            meta.yaml
+    0/
+        meta.yaml
+        structure.csv
+        peak/
+            0/
+                data.csv
+                meta.yaml
+        feature/
+            0/
+                data.csv
+                meta.yaml
+    1/
+        meta.yaml
+        structure.csv
+        peak/
+            0/
+                data.csv
+                meta.yaml
+        feature/
+            0/
+                data.csv
+                meta.yaml
 ```
+
+# comparative visualization
+
+This includes enough information to view two artifacts with the same definition of a
+sequence.
