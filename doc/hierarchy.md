@@ -1,4 +1,4 @@
-
+## Overview
 
 Input data are processed into a data hierarchy that organizes collections of structure
 and data files. Structure files define 3D geometry for a specific collection of genomic
