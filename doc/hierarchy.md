@@ -1,5 +1,4 @@
-
-''''
+```
 artifact/
     meta.yaml
     structure/
@@ -27,4 +26,4 @@ artifact/
                 meta.yaml
         feature/
         track/
-''''
+```
