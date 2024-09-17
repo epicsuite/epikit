@@ -1,3 +1,11 @@
+# overview
+
+Input data are processed into a data hierarchy that organizes collections of structure
+and data files. Structure files define 3D geometry for a specific collection of genomic
+material. Data can then be mapped into 3D space by using a specific structure.
+
+# input datasets
+
 ```
 artifact/
     meta.yaml
@@ -26,4 +34,20 @@ artifact/
                 meta.yaml
         feature/
         track/
+```
+
+# 4D fused datasets
+
+```
+artifact/
+    meta.yaml
+    structure.csv
+    peak/
+        0/
+            data.csv
+            meta.yaml
+    feature/
+        0/
+            data.csv
+            meta.yaml
 ```
