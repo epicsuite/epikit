@@ -9,31 +9,26 @@ material. Data can then be mapped into 3D space by using a specific structure.
 ```
 artifact/
     meta.yaml
-    structure/
-        chr1/
-            100000/
-                structure.csv
-                meta.yaml
-            250000/
-                structure.csv
-                meta.yaml
-        chr10/
-            100000/
-                structure.csv
-                meta.yaml
-            250000/
-                structure.csv
-                meta.yaml
-    data/
-        peak/
-            0/
-                data.csv 
-                meta.yaml
-            1/
-                data.csv 
-                meta.yaml
-        feature/
-        track/
+    chr1/
+        0/
+            meta.yaml
+            structure.csv
+            peak/
+                <name>/
+                    data.csv 
+                    meta.yaml
+                <name>/
+                    data.csv 
+                    meta.yaml
+            feature/
+                <name>/
+                    data.csv
+                    meta.yaml
+            track/
+                <name>/
+                    data.csv
+                    meta.yaml
+    chr<n>/
 ```
 
 ## 4D fused datasets
