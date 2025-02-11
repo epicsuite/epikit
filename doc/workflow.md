@@ -7,7 +7,7 @@
 | Vis Data Fusion  | structure.csv   | filename.vtp (2) |
 |                  | tracks.csv  (n) |  | 
 |                  | session.yaml    |  | 
-| Interactive Vis  | structure.csv | interactive visualization | 
+| Interactive Vis  | session.yaml     | interactive visualization | 
 |                  | filename.vtp (2) | screen.png (n) | 
-|                  | tracks.csv  (n) |  session state file | 
+|                  |                  |  session state file | 
 
