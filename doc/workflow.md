@@ -1,9 +1,11 @@
 # EPIC workflow
 
-| Step             | Inputs   | Outputs |
-| ---------------- | -------- | ------- |
-| FastQ to HiC     | HiC file | structure.csv per chromosome in HiC file |
-| HiC to Structure | HiC file | structure.csv per chromosome in HiC file |
-| Vis Data Fusion  | HiC file | structure.csv per chromosome in HiC file |
-| Interactive Vis  | HiC file | structure.csv per chromosome in HiC file |
+| Step             | Inputs     | Outputs |
+| ---------------- | --------   | ------- |
+| FastQ to HiC     | FastQ file | HiC file | 
+| HiC to Structure | HiC file   | structure.csv per chromosome in HiC file |
+| Vis Data Fusion  | structure.csv | filename.vtp |
+| Interactive Vis  | structure.csv | | 
+|                  | filename.vtp (2) | | 
+|                  | tracks.csv  (n) | | 
 
