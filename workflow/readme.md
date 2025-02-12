@@ -7,6 +7,20 @@
    workflow.yaml
    hic-to-structure.yaml
    build/
+     chr1/
+     chr2/
+     ...
+     chrN/
+       d0/
+         t0/
+           features.csv
+           structure.csv
+           track1.csv
+           track2.csv
+           ...
+           trackN.csv
+       d1/
+       vis-data-fusion.yaml
      fastq/
        filename1.1.fastq
        filename1.2.fastq
@@ -21,7 +35,6 @@
      chr2/
      ...
      chrN/
-       vis-data-fusion.yaml
        session.yaml
        d0/
          0.vtp
