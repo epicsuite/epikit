@@ -50,7 +50,9 @@
 
 ## Step 1: Data Upload and Workflow Definition
 
-User uploads `fastq` files and defines high level attributes of the workflow, which are captured in the `workflow.yaml` file. The data files are moved to the `build/fastq/` directory. A `workflow.yaml` file is created in the `results/` directory:
+1. User uploads `fastq` files and defines high level attributes of the workflow, which are captured in the `workflow.yaml` file. 
+2. The data files are moved to the `build/fastq/` directory. 
+3. A `workflow.yaml` file is created in the `results/` directory:
 
 ```
 version: x.x
