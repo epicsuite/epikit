@@ -83,7 +83,8 @@ Using the artifacts from `step 1`, run `SLURPy` to produce one `.hic` file per `
 
 ## Step 1: HiC to Structure step
 
-Define parameters for the `hic-to-structure` step, and capture in the `hic-to-structure.yaml` file, which is stored in the `build/` directory. For each `fastq` file in the `workflow.yaml` file, run `hic-to-structure` to produce a structure file in `build/chrN/(dataset)/(timestep)`.
+1. Define parameters for the `hic-to-structure` step, and capture in the `hic-to-structure.yaml` file, which is stored in the `build/` directory. 
+2. For each `fastq` file in the `workflow.yaml` file, run `hic-to-structure` to produce a structure file in `build/chrN/(dataset)/(timestep)`.
 
 `hic-to-structure.yaml`
 
