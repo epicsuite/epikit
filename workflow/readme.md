@@ -17,6 +17,22 @@
      ...
      1.n.hic
    results/
+     chr1/
+     chr2/
+     ...
+     chrN/
+       vis-data-fusion.yaml
+       session.yaml
+       d0/
+         0.vtp
+         1.vtp
+         ...
+         n.vtp
+       d1/
+         0.vtp
+         1.vtip
+         ...
+         n.vtip
 ```
 
 # workflow definition file
@@ -63,7 +79,15 @@ destination directory: `build/chrN`
 
 ## Data upload step
 
-Track data for a specific chromosome is added to the correct chromosome build directory.
+Track data for a specific chromosome is added to the correct chromosome build directory. Files to be uploaded:
+
+```
+features.csv
+track1.csv
+track2.csv
+...
+trackN.csv
+```
 
 ## Vis Data Fusion step
 
@@ -74,6 +98,15 @@ For a specific Chromosome, take the files in the `build` directory and create da
 ```
 version: x.x
 chromosome: N
+tracks:
+  peak:
+    track1.csv
+    track2.csv
+    ...
+  structure:
+    track3.csv
+    ...
+    trackN.csv
 ```
 
 Data source directory: `build/chrN/(dataset)/(timestep)`
