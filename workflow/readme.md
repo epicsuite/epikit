@@ -50,7 +50,7 @@
 
 ## Step 1: Data Upload and Workflow Definition
 
-User uploads `fastq` files and defines high level attributes of the workflow, which are captured in the `workflow.yaml` file. The data files are moved to the `results/` directory. A `workflow.yaml` file is created in the `results/` directory:
+User uploads `fastq` files and defines high level attributes of the workflow, which are captured in the `workflow.yaml` file. The data files are moved to the `build/fastq/` directory. A `workflow.yaml` file is created in the `results/` directory:
 
 ```
 version: x.x
@@ -79,7 +79,7 @@ datasets:
 
 ## Step 2: FastQ-to-HiC processing
 
-Using the artifacts from `step 1`, run `SLURPy` to produce one `.hic` file per `.fastq` file.
+Using the artifacts from `step 1`, run `SLURPy` to produce one `.hic` file per `.fastq` file. The new `.hic` files are created in `results/hic` directory.
 
 ## Step 1: HiC to Structure step
 
