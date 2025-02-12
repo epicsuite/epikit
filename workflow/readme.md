@@ -48,7 +48,9 @@
          chrN.1.n.vtp
 ```
 
-# workflow definition file
+## Step 1: Data Upload and Workflow Definition
+
+User uploads `fastq` files and defines high level attributes of the workflow, which are captured in the `workflow.yaml` file. The data files are moved to the `results/` directory. A `workflow.yaml` file is created in the `results/` directory.
 
 `workflow.yaml`
 
@@ -77,7 +79,11 @@ datasets:
         - /path/to/filename2.N.fastq
 ```
 
-## HiC to Structure step
+## Step 2: FastQ-to-HiC processing
+
+Using the artifacts from `step 1`, run `SLURPy` to produce one `.hic` file per `.fastq` file.
+
+## Step 1: HiC to Structure step
 
 For each `fastq` file in the `workflow.yaml` file, produce a structure file in `build/chrN/(dataset)/(timestep)`
 
@@ -90,7 +96,7 @@ version: x.x
 source directory: `build/`
 destination directory: `build/chrN`
 
-## Data upload step
+## Step 2: Data upload step
 
 Track data for a specific chromosome is added to the correct chromosome build directory. 
 There will be `2 x numtimesteps x numtracks + 1 (feature file)` files uploaded per chromosome.
@@ -104,7 +110,7 @@ track2.csv
 trackN.csv
 ```
 
-## Vis Data Fusion step
+## Step 3: Vis Data Fusion step
 
 For a specific Chromosome, take the files in the `build` directory and create data in the `results` directory. This is done by iterating over the datasets and timesteps in the source directory and creating the correct number of files in the `results` directory.
 
