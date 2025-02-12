@@ -124,4 +124,4 @@ tracks:
     trackN.csv
 ```
 
-Data source directory: `build/chrN/(dataset)/(timestep)`
+source directory: `build/chrN/(dataset)/(timestep)`
