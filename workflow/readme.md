@@ -83,7 +83,7 @@ datasets:
 
 1. Using the artifacts from `step 1`, run `SLURPy` to produce one `.hic` file per `.fastq` file. The new `.hic` files are created in `results/hic` directory.
 
-## Step 1: HiC to Structure step
+## Step 3: HiC to Structure step
 
 1. Define parameters for the `hic-to-structure` step, and capture in the `hic-to-structure.yaml` file, which is stored in the `build/` directory. 
 2. For each `fastq` file in the `workflow.yaml` file, run `hic-to-structure` to produce a structure file in `build/chrN/(dataset)/(timestep)`.
@@ -97,11 +97,19 @@ version: x.x
 source directory: `build/`
 destination directory: `build/chrN`
 
-## Step 2: Data upload step
+## Step 4: Data upload step
 
 1. Track data for a specific chromosome is added to the correct chromosome build directory. 
 There will be `2 x numtimesteps x numtracks + 1 (feature file)` files uploaded per chromosome.
 Files to be uploaded:
+
+```
+features.csv
+track1.csv
+track2.csv
+...
+trackN.csv
+```
 
 2. Metadata for this step is captured in a `vis-data-fusion.yaml` which is saved in `build/chrN/` directory.
 
@@ -121,15 +129,9 @@ tracks:
     trackN.csv
 ```
 
-```
-features.csv
-track1.csv
-track2.csv
-...
-trackN.csv
-```
+3. Run the next step to create vis files.
 
-## Step 3: Vis Data Fusion step
+## Step 5: Vis Data Fusion step
 
 For a specific Chromosome, take the files in the `build` directory and create data in the `results` directory. This is done by iterating over the datasets and timesteps in the source directory and creating the correct number of files in the `results` directory.
 
