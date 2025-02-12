@@ -37,15 +37,15 @@
      chrN/
        session.yaml             session file, defined by the viewer
        d0/
-         0.vtp
-         1.vtp
+         chrN.0.0.vtp
+         chrN.0.1.vtp
          ...
-         n.vtp
+         chrN.0.n.vtp
        d1/
-         0.vtp
-         1.vtip
+         chrN.1.0.vtp
+         chrN.1.1.vtp
          ...
-         n.vtip
+         chrN.1.n.vtp
 ```
 
 # workflow definition file
