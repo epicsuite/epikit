@@ -92,7 +92,9 @@ destination directory: `build/chrN`
 
 ## Data upload step
 
-Track data for a specific chromosome is added to the correct chromosome build directory. Files to be uploaded:
+Track data for a specific chromosome is added to the correct chromosome build directory. 
+There will be `2 x numtimesteps x numtracks + 1 (feature file)` files uploaded per chromosome.
+Files to be uploaded:
 
 ```
 features.csv
@@ -105,8 +107,6 @@ trackN.csv
 ## Vis Data Fusion step
 
 For a specific Chromosome, take the files in the `build` directory and create data in the `results` directory. This is done by iterating over the datasets and timesteps in the source directory and creating the correct number of files in the `results` directory.
-
-There will be `2 x numtimesteps x numtracks + 1 (feature file)` files uploaded per chromosome.
 
 `vis-data-fusion.yaml`
 
