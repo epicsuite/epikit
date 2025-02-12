@@ -3,7 +3,7 @@
 ## directory structure and example files
 ```
 (unique identifier)/
-   experiment.csv
+   experiment.csv               table encoding the experimental design information for this workflow
    workflow.yaml
    build/
      fastq/
