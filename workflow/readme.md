@@ -5,12 +5,13 @@
 (unique identifier)/
    experiment.csv               table encoding the experimental design information for this workflow
    workflow.yaml
+   hic-to-structure.yaml
    build/
      fastq/
-       filename1.fastq
-       filename2.fastq
+       filename1.1.fastq
+       filename1.2.fastq
        ...
-       filename3.fastq
+       filename2.N.fastq
      0.0.hic
      0.1.hic
      ...
@@ -21,6 +22,7 @@
 # workflow definition file
 
 `workflow.yaml`
+
 ```
 version: x.x
 experiment: name
@@ -31,22 +33,43 @@ datasets:
   resolution: 100000
   0:
     treatment: name
-    files:
-      fastq:
-        - /path/to/file.fastq
-        - /path/to/file.fastq
-        - /path/to/file.fastq
+      files:
+        fastq:
+          - /path/to/filename1.1.fastq
+          - /path/to/filename1.2.fastq
+          - ...
+          - /path/to/filename1.N.fastq
   1:
     treatment: name
       fastq:
-        - /path/to/file.fastq
-        - /path/to/file.fastq
-        - /path/to/file.fastq
+        - /path/to/filename2.1.fastq
+        - /path/to/filename2.2.fastq
+        - ...
+        - /path/to/filename2.N.fastq
 ```
 
 ## HiC to Structure step
 
-hic-to-structure.yaml
+For each `fastq` file in the `workflow.yaml` file, produce a structure file in `build/chrN/(dataset)/(timestep)`
+
+`hic-to-structure.yaml`
+
 ```
+version: x.x
 ```
 
+source directory: `build/`
+destination directory: `build/chrN`
+
+## Vis Data Fusion step
+
+For a specific Chromosome, take the files in the `build` directory and create data in the `results` directory. This is done by iterating over the datasets and timesteps in the source directory and creating the correct number of files in the `results` directory.
+
+`vis-data-fusion.yaml`
+
+```
+version: x.x
+chromosome: N
+```
+
+Data source directory: `build/chrN/(dataset)/(timestep)`
