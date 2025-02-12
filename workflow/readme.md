@@ -19,6 +19,7 @@
            track2.csv
            ...
            trackN.csv
+           vis-data-fusion.yaml
        d1/
        vis-data-fusion.yaml
      fastq/
