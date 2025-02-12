@@ -35,7 +35,7 @@
      chr2/
      ...
      chrN/
-       session.yaml
+       session.yaml             session file, defined by the viewer
        d0/
          0.vtp
          1.vtp
