@@ -13,13 +13,13 @@
      chrN/
        d0/
          t0/
-           features.csv
            structure.csv
            track1.csv
            track2.csv
            ...
            trackN.csv
        d1/
+       features.csv
        vis-data-fusion.yaml
      fastq/
        filename1.1.fastq
