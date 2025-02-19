@@ -1,3 +1,4 @@
 .venv11/
 epikit.egg-info/
 build/
+tmp/

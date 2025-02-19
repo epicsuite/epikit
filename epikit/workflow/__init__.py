@@ -31,7 +31,7 @@ class workflow():
         self.add_experimental_design()
 
     def __str__(self):
-        return f"cline: {self.cline}\ndescription: {self.description}\nexperiment: {self.experiment}\nreplicate: {self.replicate}\nresolution: {self.resolution}\nrootdir: {self.rootdir}\ntimeunits: {self.timeunits}\ntimevalues: {self.timevalues}\ntreatments: {self.treatments}\nversion: {self.version}\ndatasets: " + str(self.datasets) + "\n"
+        return f"cline: {self.cline}\ndescription: {self.description}\nexperiment: {self.experiment}\nreplicate: {self.replicate}\nresolution: {self.resolution}\nrootdir: {self.rootdir}\ntimeunits: {self.timeunits}\ntimevalues: {self.timevalues}\ntreatments: {self.treatments}\nversion: {self.version}\ndatasets: " + str(self.datasets)
 
     def add_experimental_design(self):
         self.datasets = [] 
@@ -44,6 +44,6 @@ class workflow():
                 self.datasets[0].append(row['filename_0'])
                 self.datasets[1].append(row['filename_1'])
 
-    def write(self):
-        with open("test.yaml", 'w') as file:
+    def write(self, dest):
+        with open(dest, 'w') as file:
             yaml.dump(self.__dict__, file)

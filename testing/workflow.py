@@ -1,7 +1,9 @@
 import epikit
+import os
 
 workflow = epikit.workflow(rootdir="testing/data")
 
 print(workflow)
 
-workflow.write()
+os.makedirs('tmp', exist_ok=True)
+workflow.write("tmp/workflow.yaml")
