@@ -4,11 +4,11 @@ import yaml
 
 class workflow():
 
-    def __init__(self, infile="workflow_init.yaml", cellline=None, description=None, experiment=None, replicate=0, 
+    def __init__(self, infile="workflow_init.yaml", cline=None, description=None, experiment=None, replicate=0, 
                  resolution=100000, rootdir=",", timeunits='hrs', timevalues=[], treatments=[], ):
 
         # set defaults 
-        self.cellline    = cellline 
+        self.cline       = cline 
         self.description = description
         self.experiment  = experiment 
         self.replicate   = replicate 
@@ -30,7 +30,7 @@ class workflow():
         self.add_experimental_design()
 
     def __str__(self):
-        return f"cellline: {self.cellline}\ndescription: {self.description}\nexperiment: {self.experiment}\nreplicate: {self.replicate}\nresolution: {self.resolution}\nrootdir: {self.rootdir}\ntimeunits: {self.timeunits}\ntimevalues: {self.timevalues}\ntreatments: {self.treatments}\nversion: {self.version}\ndatasets: " + str(self.datasets) + "\n"
+        return f"cline: {self.cline}\ndescription: {self.description}\nexperiment: {self.experiment}\nreplicate: {self.replicate}\nresolution: {self.resolution}\nrootdir: {self.rootdir}\ntimeunits: {self.timeunits}\ntimevalues: {self.timevalues}\ntreatments: {self.treatments}\nversion: {self.version}\ndatasets: " + str(self.datasets) + "\n"
 
     def add_experimental_design(self):
         self.datasets = [] 
