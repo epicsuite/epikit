@@ -1,12 +1,12 @@
+import epikit
 import csv
-import yaml
 
 class workflow():
 
     def __init__(self, input="workflow_input.yaml", rootdir=",", description=None, experiment=None, cellline=None, replicate=0, timeunits='hrs', timevalues=[], resolution=100000):
         self.rootdir     = rootdir
-        with open(init, 'r') as initdata:
-
+        # with open(init, 'r') as initdata:
+        self.version     = epikit.__version__
         self.description = description
         self.experiment  = experiment 
         self.cellline    = cellline 
