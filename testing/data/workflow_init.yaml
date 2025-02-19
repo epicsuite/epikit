@@ -1,9 +1,9 @@
-version: x.x
+version: 0.5.1 
 description: some description
 experiment: name
 cell line: name
 replicate: 1
 treatments: [first, second]
 timeunits: hr
-timevalues: [24, 48, ..., N]
+timevalues: [24, 48, 72, 96]
 resolution: 100000

@@ -21,6 +21,7 @@ setuptools.setup(
     zip_safe=False,
     packages=[  "epikit", "epikit.workflow" ],
     install_requires=[
+        "pyyaml"
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
