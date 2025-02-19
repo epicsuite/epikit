@@ -5,7 +5,7 @@ import os
 
 class workflow():
 
-    def __init__(self, infile="workflow_init.yaml", cline=None, description=None, experiment=None, replicate=0, 
+    def __init__(self, infile="workflow.init", cline=None, description=None, experiment=None, replicate=0, 
                  resolution=100000, rootdir=",", timeunits='hrs', timevalues=[], treatments=[], ):
 
         # set defaults 
