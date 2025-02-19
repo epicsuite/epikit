@@ -1,5 +1,4 @@
 SCRATCH_DIR=testing/scratch
-NEW_SCRATCH_DIR=testing/scratcher
 
 null:
 	@:
