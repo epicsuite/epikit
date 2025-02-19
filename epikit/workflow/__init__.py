@@ -1,6 +1,7 @@
 import epikit
 import csv
 import yaml
+import os
 
 class workflow():
 
@@ -13,7 +14,7 @@ class workflow():
         self.experiment  = experiment 
         self.replicate   = replicate 
         self.resolution  = resolution
-        self.rootdir     = rootdir
+        self.rootdir     = os.path.abspath(rootdir)
         self.timeunits   = timeunits
         self.timevalues  = timevalues
         self.treatments  = treatments 
@@ -42,3 +43,7 @@ class workflow():
             for row in edfile:
                 self.datasets[0].append(row['filename_0'])
                 self.datasets[1].append(row['filename_1'])
+
+    def write(self):
+        with open("test.yaml", 'w') as file:
+            yaml.dump(self.__dict__, file)
