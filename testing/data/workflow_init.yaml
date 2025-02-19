@@ -1,0 +1,9 @@
+version: x.x
+description: some description
+experiment: name
+cell line: name
+replicate: 1
+treatments: [first, second]
+timeunits: hr
+timevalues: [24, 48, ..., N]
+resolution: 100000

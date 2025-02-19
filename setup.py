@@ -19,7 +19,7 @@ setuptools.setup(
     url="https://github.com/epic/epikit",
     include_package_data=True,
     zip_safe=False,
-    packages=[  "epikit" ],
+    packages=[  "epikit", "epikit.workflow" ],
     install_requires=[
     ],
     classifiers=[
