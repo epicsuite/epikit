@@ -4,7 +4,8 @@ import yaml
 
 class workflow():
 
-    def __init__(self, infile="workflow_init.yaml", rootdir=",", description=None, experiment=None, cellline=None, replicate=0, timeunits='hrs', timevalues=[], treatments=[], resolution=100000):
+    def __init__(self, infile="workflow_init.yaml", cellline=None, description=None, experiment=None, replicate=0, 
+                 resolution=100000, rootdir=",", timeunits='hrs', timevalues=[], treatments=[], ):
 
         # set defaults 
         self.cellline    = cellline 
@@ -26,12 +27,15 @@ class workflow():
             for key, value in data.items():
                 setattr(self, key, value)
 
+        self.add_experimental_design()
+
     def __str__(self):
-        return f"cellline: {self.cellline}\ndescription: {self.description}\nexperiment: {self.experiment}\nreplicate: {self.replicate}\nresolution: {self.resolution}\nrootdir: {self.rootdir}\ntimeunits: {self.timeunits}\ntimevalues: {self.timevalues}\ntreatments: {self.treatments}\nversion: {self.version}" 
+        return f"cellline: {self.cellline}\ndescription: {self.description}\nexperiment: {self.experiment}\nreplicate: {self.replicate}\nresolution: {self.resolution}\nrootdir: {self.rootdir}\ntimeunits: {self.timeunits}\ntimevalues: {self.timevalues}\ntreatments: {self.treatments}\nversion: {self.version}\ndatasets: " + str(self.datasets) + "\n"
 
     def add_experimental_design(self):
         self.datasets = [] 
         with open(self.rootdir + "/experimental_design.csv") as ed:
+            # this reader will skip the first line of a csv file (the column names)
             edfile = csv.DictReader(ed, delimiter=',')
             self.datasets.append([])
             self.datasets.append([])
