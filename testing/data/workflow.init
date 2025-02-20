@@ -1,9 +1,8 @@
-version: 0.5.1 
+cell_line: BXAN
 description: this is a test experiment 
 experiment: experiment name
-cell_line: BXAN
 replicate: 1
-treatments: [first, second]
 timeunits: hr
 timevalues: [24, 48, 72, 96]
+treatments: [first, second]
 resolution: 100000
