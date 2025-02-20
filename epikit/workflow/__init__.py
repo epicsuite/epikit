@@ -5,11 +5,11 @@ import os
 
 class workflow():
 
-    def __init__(self, infile="workflow.init", cline=None, description=None, experiment=None, replicate=0, 
+    def __init__(self, infile="workflow.init", cell_line=None, description=None, experiment=None, replicate=0, 
                  resolution=100000, rootdir=",", timeunits='hrs', timevalues=[], treatments=[], ):
 
         # set defaults 
-        self.cline       = cline 
+        self.cell_line   = cell_line 
         self.description = description
         self.experiment  = experiment 
         self.replicate   = replicate 
@@ -31,7 +31,7 @@ class workflow():
         self.add_experimental_design()
 
     def __str__(self):
-        return f"cline: {self.cline}\ndescription: {self.description}\nexperiment: {self.experiment}\nreplicate: {self.replicate}\nresolution: {self.resolution}\nrootdir: {self.rootdir}\ntimeunits: {self.timeunits}\ntimevalues: {self.timevalues}\ntreatments: {self.treatments}\nversion: {self.version}\ndatasets: " + str(self.datasets)
+        return f"cell_line: {self.cell_line}\ndescription: {self.description}\nexperiment: {self.experiment}\nreplicate: {self.replicate}\nresolution: {self.resolution}\nrootdir: {self.rootdir}\ntimeunits: {self.timeunits}\ntimevalues: {self.timevalues}\ntreatments: {self.treatments}\nversion: {self.version}\ndatasets: " + str(self.datasets)
 
     def add_experimental_design(self):
         self.datasets = [] 

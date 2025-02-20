@@ -1,7 +1,7 @@
 version: 0.5.1 
 description: this is a test experiment 
 experiment: experiment name
-cline: BXAN
+cell_line: BXAN
 replicate: 1
 treatments: [first, second]
 timeunits: hr
