@@ -1,6 +1,6 @@
 cell_line: BXAN
 description: this is a test experiment 
-experiment: experiment name
+experiment: BXAN_test001 
 replicate: 1
 timeunits: hr
 timevalues: [24, 48, 72, 96]
