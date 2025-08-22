@@ -1,6 +1,9 @@
 import epikit
 import os
 
-workflow = epikit.workflow(rootdir="testing/data")
+inputdeck = epikit.inputdeck("testing/data/workflow.yaml")
+
 os.makedirs('testing/scratch', exist_ok=True)
-workflow.write("testing/scratch/workflow.yaml")
+inputdeck.write("testing/scratch/workflow.yaml")
+
+inputdeck.create_ensemble_metadata("testing/scratch/ensemble")

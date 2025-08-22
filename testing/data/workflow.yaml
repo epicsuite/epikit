@@ -1,0 +1,34 @@
+ensemble:
+  meta:
+    title: This is the title
+    desc: A longer description of the dataset, with more information.
+  reference:
+    sequence: somename.fna
+    annotation: somename.gff
+  chromosomes:
+    excluded: [chr1, chr2, chr3]
+  experiments:
+    - name: experiment_A
+      timesteps:
+        - name: timestep00
+          structure: [A-t00-0.fastq, A-t00-1.fastq]
+          tracks: 
+            - name01: [A-t00-0.hic, A-t00-1.hic]
+            - name02: [A-t00-0.hic, A-t00-1.hic]
+        - name: timestep01
+          structure: [A-t01-0.fastq, A-t01-1.fastq]
+          tracks: 
+            - name01: [A-t00-0.hic, A-t00-1.hic]
+            - name02: [A-t00-0.hic, A-t00-1.hic]
+    - name: experiment_B
+      timesteps:
+        - name: timestep00
+          structure: [B-t00-0.fastq, B-t00-1.fastq]
+          tracks: 
+            - name01: [A-t00-0.hic, A-t00-1.hic]
+            - name02: [A-t00-0.hic, A-t00-1.hic]
+        - name: timestep01
+          structure: [B-t01-0.fastq, B-t01-1.fastq]
+          tracks: 
+            - name01: [A-t00-0.hic, A-t00-1.hic]
+            - name02: [A-t00-0.hic, A-t00-1.hic]
