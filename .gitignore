@@ -2,3 +2,4 @@
 epikit.egg-info/
 build/
 testing/scratch/
+__pycache__/
