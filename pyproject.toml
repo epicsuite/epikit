@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "epikit"
 dynamic = ["version"]
 description = "epigenetics toolkit"
+readme = "readme.md"
 authors = [
     {name = "David H. Rogers", email = "dhr@lanl.gov"}
 ]
