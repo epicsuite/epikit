@@ -19,3 +19,7 @@ This tool checks the integrity of a 4D epigenetics dataset
 This tool processes the result files in a 4D genetics dataset and generates
 missing metadata as required in the final data specification.
 
+```
+    epigen --ensemble path/to/ensemble
+```
+
