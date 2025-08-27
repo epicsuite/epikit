@@ -1,4 +1,6 @@
 from .core import *
 from .workflow import *
 from .ensemble import *
-from ._version import __version__ 
+
+__version__ = "0.6.5"
+

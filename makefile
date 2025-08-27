@@ -13,7 +13,7 @@ module:
 	rm -rf build
 	rm -rf *.egg-info
 	rm -rf dist
-	python3 setup.py sdist
+	python -m build
 
 module-upload:
 	twine upload dist/*
