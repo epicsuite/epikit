@@ -149,6 +149,8 @@ def main():
     print("Result")
     if success:
         print("  PASS")
+        exit(0)
     else:
         print("  FAIL")
+        exit(1)
 
