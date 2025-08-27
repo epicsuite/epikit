@@ -39,7 +39,7 @@ def main():
     )
     
     # Add required argument
-    parser.add_argument( "--ensemble", required=False, help="Name of the ensemble to use.")
+    parser.add_argument( "ensemble", help="Name of the ensemble to use.")
     parser.add_argument( "--verbose", action="store_true",   help="Enable verbose output.")
     parser.add_argument( "-v", "--version", action="store_true", help="Print script version and exit")
     args = parser.parse_args()
